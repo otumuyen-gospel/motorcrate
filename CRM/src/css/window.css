@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 19, 2020, 5:31:39 PM
+    Author     : user1
+*/
+
+
+#root{
+    -fx-background-image:url("bg.png");
+    -fx-background-size:cover;
+}
+#top{
+    -fx-background-color:#e9f1f7;
+    -fx-padding:10px;
+}
+#title{
+    -fx-text-fill:#fff;
+    -fx-font-size:20px;
+    -fx-font-weight:bold;
+}
+#logo{
+    -fx-image:url("logo.png");
+    
+}
+#bottom{
+    -fx-background-color:#233d4d;
+}
+#author{
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+}
+
+#account{
+    -fx-image:url("account.png");
+}
+#reviews{
+    -fx-image:url("reviews.png");
+}
+
+#settings{
+    -fx-image:url("settings.png");
+}
+#faq{
+    -fx-image:url("faq.png");
+}
+#schedule{
+    -fx-image:url("schedule.png");
+}
+
+#analytics{
+    -fx-image:url("analytics.png");
+}
+#email{
+    -fx-image:url("mail.png");
+}
+#editor{
+    -fx-image:url("editor.png");
+}

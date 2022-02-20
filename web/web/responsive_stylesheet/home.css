@@ -1,0 +1,1328 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 13, 2020, 1:10:19 AM
+    Author     : Gospel system
+*/
+
+
+body{
+    background-color: #f1f1f1;
+    font-family: noto sans;
+}
+#wrapper{
+    width: 100%;
+}
+body ,h1,h2,h3,h4,h5,h6,p{
+    margin:0px;
+}
+a, img, a img{
+    text-decoration: none;
+    border:none;
+}
+.cb{
+    clear: both;
+}
+#header{
+    width: 90%;
+    padding:20px 5%;
+    overflow: hidden;
+    border-bottom: 2px solid #ccc;
+    position: fixed;
+    top:0px;
+    background-color: #f1f1f1;
+    left: 0px;
+    z-index: 100;
+}
+#header div a{
+    float: left;
+    margin-right: 6%;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 14px;
+    color: #233D4D;
+}
+#header div .subscribe{
+    border-radius: 50px;
+    padding: 8px 20px;
+    margin-left: -4%;
+    margin-right: 2.5%;
+    margin-top: 30px;
+    text-align: center;
+    border:2px solid #233D4D;
+}
+#header div .subscribe:hover{
+    background-color:#233D4D;
+    border:2px solid #233D4D;
+    color: #fff;
+}
+#header div .signin{
+    border-radius: 50px;
+    padding: 8px 35px;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: -4%;
+    color: #fff;
+    border:2px solid #FE7F2D;
+    background-color: #FE7F2D;
+}
+#header div .signin:hover{
+    background-color: #FFA164;
+    border:2px solid #FFA164;
+    color: #fff;
+}
+#header div .target{
+    margin-top: 40px;
+}
+#header div .target:hover{
+    color: #FE7F2D;
+}
+#header #menu{
+    display: none;
+}
+#sidebar{
+    position: fixed;
+    top:0px;
+    left:0px;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    display: none;
+}
+#sidebar div{
+    background-color: #f1f1f1;
+    padding: 10px 0px;
+    width: 300px;
+    height: 100vh;
+    text-align: center;
+    overflow-y: auto;
+}
+#sidebar div #close{
+    position: relative;
+    left: 110px;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 50px;
+}
+#sidebar div p{
+    padding: 13px;
+    border-bottom: 0.1px solid #ccc;
+    color: #233D4D;
+}
+#sidebar div p a{
+    color: inherit;
+}
+#sidebar div p:hover{
+    color:#fff;
+    background-color: #233D4D;
+}
+
+#sidebar div nav{
+    margin-top: 30px;
+}
+#sidebar div nav a img{
+    margin: auto 2px;
+}
+
+#slider{
+    margin-top: 124px;
+    height: 748px;
+    width: 100%;
+    background:url('../assets/banner1.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding:20px 0px;
+}
+
+#slider .sliderContent{
+    margin-top: 120px;
+    color: #fff;
+    margin-left:10.8%;
+}
+#slider .sliderContent h1{
+    font-weight: bolder;
+    font-size: 45px;
+    line-height: 61px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+#slider .sliderContent .paragraph{
+     font-size: 20px;
+     margin: 20px 0px 70px 0px;
+     width: 500px;
+     line-height: 25px;
+     font-weight: 500;
+
+}
+#slider .sliderContent .buttons .subscribe{
+    background-color: #FFFFFF;
+    border-radius:33px;
+    padding: 15px 30px;
+    line-height: 27px;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #427AA1;
+}
+#slider .sliderContent .buttons .subscribe:hover{
+    background-color: #EEEEEE;
+
+}
+#slider .sliderContent .buttons .boxes{
+    background-color: #FE7F2D;
+    border-radius:33px;
+    padding: 15px 30px;
+    line-height: 27px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+#slider .sliderContent .buttons .boxes:hover{
+    background-color: #FFA164;
+
+}
+#slider .sliderBox{
+    margin-top: 40px;
+    margin-left:10%; 
+    position: fixed;
+}
+
+#happiness{
+    margin: 50px 5%;
+    width: 90%;
+    overflow: hidden;
+    text-align: center;
+}
+#happiness h1{
+    color: #FE7F2D;
+    font-size: 40px;
+}
+#happiness .p1{
+    font-size: 17px;
+    margin: 10px auto;
+    color: #313131;
+}
+#happiness .tools{
+    float: left;
+    width: 45%;
+    margin-top: 50px;
+}
+#happiness .tools .tool1{
+    position: absolute;
+    margin-left: -85px;
+    margin-top: 71px;
+}
+#happiness .tools .tool2{
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 30px;
+}
+#happiness .tools .tool3{
+    position: absolute;
+    margin-left: 30px;
+    margin-top: -30px;
+}
+#happiness .tools .tool4{
+    position: absolute;
+    margin-left: 150px;
+    margin-top: -20px;
+}
+#happiness .tools .tool5{
+    position: absolute;
+    margin-left: 270px;
+    margin-top: 50px;
+}
+#happiness .tools .toolbox{
+    position: relative;
+    margin-top: 150px;
+}
+#happiness .happyholder{
+    width: 55%;
+    overflow: hidden;
+    margin-top: 40px;
+}
+#happiness .happyholder .happy{
+    float: left;
+    width: 49%;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+#happiness .happyholder .happy .happyText{
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 19px;
+    color: #427AA1;
+}
+#happiness .happyholder .happy .happyText .p3{
+    font-weight: bolder;
+}
+
+#plan{
+    margin-top: 50px;
+}
+
+#plan .planholder{
+    overflow: hidden;
+    background-color: #fff;
+    padding: 10px 5%;
+    overflow: hidden;
+}
+#plan h1{
+    color: #FE7F2D;
+    font-size: 40px;
+    text-align: center;
+}
+#plan .p1{
+    font-size: 17px;
+    margin: 10px 0px 50px 0px;
+    color: #313131;
+    text-align: center;
+}
+#plan .planholder .bottles{
+    float: left;
+    overflow: hidden;
+    width: 45%;
+} 
+#plan .planholder .bottle{
+    float: left;
+    overflow: hidden;
+    width: 45%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+#plan .planholder .bottle img{
+    margin-bottom: 15px;
+    height:129px;
+    width:178px;
+}
+#plan .planholder .bottle span{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #427AA1;
+}
+#plan .planholder .gender{
+    float: left;
+    overflow: hidden;
+    margin-left: 4%;
+}
+#plan .planholder .gender a img{
+    margin: auto 4px;
+    margin-top: -10px;
+    float: left;
+}
+.gen1:hover{
+    box-shadow:1px 1px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow:1px 1px 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow:1px 1px 5px rgba(0,0,0,0.2);
+}
+.gen2:hover{
+    box-shadow:1px 1px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow:1px 1px 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow:1px 1px 5px rgba(0,0,0,0.2);
+}
+#why{
+    background:#427AA1;
+    overflow: hidden;
+    background-size: cover;
+    padding: 0px 5% 20px 5%;
+}
+#why h1{
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    color: #FFFFFF;
+}
+#why .whys{
+    float: left;
+    width: 20%;
+    text-align: center;
+    margin: 10px 6.66% 20px 0px;
+}
+#why .lastwhy{
+    margin-right: 0px;
+}
+#why .whys p{
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 50px;
+    
+    color: #FFFFFF;
+}
+#review{
+    margin: 20px 5%;
+    width: 90%;
+    text-align: center;
+
+}
+#review .firstline{
+    margin: 20px auto;
+    width: 100%;
+}
+#review .mr{
+    margin-bottom: 10px;
+}
+#review .lastline{
+    margin: 40px auto;
+    width: 100%;
+}
+#review h1{
+    font-size: 40px;
+    line-height: 47px;
+    color: #FE7F2D;
+}
+#review .p1{
+    font-size: 17px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    margin: 20px auto;
+}
+#review .butt .buttons{
+    background-color: #fff;
+    border-radius: 100px;
+    border:2px solid #eee;
+    padding: 15px;
+    width: 15px;
+    height: 15px;
+    margin-top: 70px;
+}
+#review .butt .buttons:hover{
+    cursor:pointer;
+    border:2px solid #ffb600;
+}
+#review .butt{
+    width: 8%;
+    margin-right: 0.8%;
+    float: left;
+}
+#review .reviews{
+   min-height: 200px;
+   background: #FFFFFF;
+   border:1px solid #eee;
+   border: 1px solid rgba(49, 49, 49, 0.3);
+   box-sizing: border-box;
+   border-radius: 5px;
+   float: left;
+   width: 20%;
+   margin-right: 0.8%;
+   padding: 1%;
+   display: none;
+}
+#review .firstfourreview{
+    display: block;
+}
+#review .reviews h1{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+#review .reviews nav{
+    margin-bottom: 10px;
+}
+#review .reviews p{
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: #666666;
+}
+#review .lastbutt{
+    margin-right: 0px;
+}
+#video{
+    width: 90%;
+    margin: 10px 5%;
+    text-align: center;
+}
+#video h1{
+    font-size: 40px;
+    line-height: 47px;
+    color: #FE7F2D;
+}
+#video p{
+    font-size: 17px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    margin: 20px auto;
+}
+#video .smallvideo iframe{
+    width: 23%;
+    height: 270px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 2.66%;
+}
+#video .lastframe{
+    margin-right: 0px;
+}
+#video .bigvideo{
+    margin-top: 20px;
+}
+#video .bigvideo iframe{
+    width: 100%;
+    height: 500px;
+}
+
+#footer{
+    margin-top: 40px;
+    background-color: #427AA1;
+    overflow: hidden;
+}
+#footer .firstpart{
+     background:url("../assets/footerbg.png");
+     overflow: hidden;
+     background-size: cover;
+     min-height: 222px;
+}
+#footer .foot{
+    padding: 50px 5% 0px 5%;
+    overflow: hidden;
+}
+#footer .footlet{
+    float: left;
+    width: 24%;
+    margin-right: 1.2%;
+}
+#footer .footlet nav{
+    display: inline-block;
+}
+#footer .footlet *{
+    margin-bottom: 15px;
+}
+#footer p{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17px;
+    font-family: barlow;
+
+}
+#footer p,#footer a,#footer h2,#footer h3{
+    color: #fff;
+    text-decoration: none;
+}
+#footer h3{
+    font-size: 17px;
+    line-height: 23px;
+}
+#footer h2{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 41px;
+    letter-spacing: 0.06em;
+}
+#footer h2, #footer .firstp, #footer .lastp{
+    text-align: center;
+    margin-top: 40px;
+}
+#footer .lastp{
+    font-family: noto sans;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 23px;
+    background-color: #233d4d;
+}
+#footer .firstp{
+    margin-bottom: 40px;
+}
+#footer .firstp a{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+    background: #FE7F2D;
+    border-radius: 33px;
+    padding: 10px 20px;
+    color: #FFFFFF;
+}
+#footer .firstp a:hover{
+    background-color: #FFA164;
+    color: #fff;
+}
+#footer .foot .lastfootlet{
+    margin-right: 0px;
+}
+#footer .social{
+    width: 64px;
+    height: 37px;
+    margin-right:12.8px;
+}
+#footer .lastsocials{
+    margin-right: 0px;
+}
+#footer .footerfirstnav{
+    margin-bottom: 10px;
+}
+#footer .footerfirstnav *{
+    margin:0px 5px;
+}
+@media screen and (min-width: 1300px) and (max-width:1450px) {
+  
+    #header div a{
+       margin-right: 5.05%;
+    }
+    
+}
+@media screen and (min-width: 1220px) and (max-width:1299px) {
+  
+    #header div a{
+       margin-right: 5.5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+}
+@media screen and (min-width:1060px) and (max-width:1219px) {
+    #header div a{
+       margin-right: 5.5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+    #video .smallvideo{
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        display: flex;
+    }
+    #video .smallvideo iframe{
+        width: 250px;
+        height: 250px;
+        flex: 0 0 auto;
+        float: none;
+    }
+    #video .bigvideo{
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width:900px) and (max-width:1059px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #plan .planholder{
+        text-align: center;
+        padding: 10px;
+    }
+    #plan .planholder .bottles{
+        width: 80%;
+        margin: auto 10%;
+        float: none;
+    }
+    #plan .planholder .bottles .bottle{
+        width: 50%;
+    }
+    #plan .planholder .gender{
+        float: none;
+        width: 80%;
+        margin: auto 10%;
+        text-align: center;
+    }
+    #plan .planholder .gender a img{
+        margin-top: -10px;
+        float: none;
+    }
+
+    #header #menu{
+        display: block;
+        float: left;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+        margin-right: 38%;
+    }
+    #header a .logo{
+        width: 100px;
+        height: 53px;
+        
+    }
+    #header div .signin{
+        float: right;
+        margin: 0px;
+        font-size: 13px;
+        padding: 4px 16px;
+        margin-top: 10px;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    #review .reviews{
+        margin-right: 2.3%;
+    }
+    #review .buttons{
+        margin-right: 2.3%;
+    }
+    #video .smallvideo{
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        display: flex;
+        padding: 20px auto;
+    }
+    #video .smallvideo iframe{
+        width: 250px;
+        height: 250px;
+        flex: 0 0 auto;
+        float: none;
+    }
+    #video .bigvideo{
+        display: none;
+    }
+    #happiness .tools{
+        display: none;
+    }
+    #happiness .happyholder {
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        padding: 5px 0px;
+        display: flex;
+        clear: both;
+        margin-top: 30px;
+    }
+    #happiness .happyholder .happy{
+        width: 240px;
+        height: 240px;
+        flex: 0 0 auto;
+        float: none;
+    }
+    #happiness .happyholder .last{
+        margin-top: 10px;
+    }
+    #happiness .happyholder .third{
+        margin-top: 20px;
+    }
+    #happiness .happyholder .happy img{
+        width: auto;
+    }
+    #review .reviewholder{
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        padding: 20px 0px;
+        display: flex;
+    }
+    #review .reviewholder .buttons{
+        display: none;
+    }
+    #review .reviewholder .reviews{
+        width: 240px;
+        height: 240px;
+        flex: 0 0 auto;
+        float: none;
+        display: block;
+    }
+    #slider{
+        margin-top: 90px;
+        background-size: 100%;
+        height: 500px;
+    }
+    #slider .sliderBox{
+        display: none;
+    }
+    #slider .sliderContent{
+       margin-top: 50px;
+    }
+    #slider .sliderContent h1{
+        font-size: 22px;
+    }
+    #slider .sliderContent .paragraph{
+        width: 400px;
+        word-break: break-all;
+    }
+    #slider .sliderContent .buttons .subscribe, #slider .sliderContent .buttons .boxes{
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width:750px) and (max-width:899px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #plan .planholder{
+        text-align: center;
+        padding: 10px;
+    }
+    #plan .planholder .bottles{
+        width: 80%;
+        margin: auto 10%;
+        float: none;
+    }
+    #plan .planholder .bottles .bottle{
+        width: 50%;
+    }
+    #plan .planholder .gender{
+        float: none;
+        width: 80%;
+        margin: auto 10%;
+        text-align: center;
+    }
+    #plan .planholder .gender a img{
+        margin-top: -10px;
+        float: none;
+    }
+
+    #header #menu{
+        display: block;
+        float: left;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+        margin-right: 38%;
+    }
+    #header a .logo{
+        width: 100px;
+        height: 53px;
+        
+    }
+    #header div .signin{
+        float: right;
+        margin: 0px;
+        font-size: 13px;
+        padding: 4px 16px;
+        margin-top: 10px;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    #review .reviews{
+        margin-right: 2.3%;
+    }
+    #review .buttons{
+        margin-right: 2.3%;
+    }
+    #video .smallvideo{
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        display: flex;
+        padding: 20px auto;
+    }
+    #video .smallvideo iframe{
+        width: 250px;
+        height: 250px;
+        flex: 0 0 auto;
+        float: none;
+    }
+    #video .bigvideo{
+        display: none;
+    }
+    #happiness .tools{
+        display: none;
+    }
+    #happiness .happyholder {
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        padding: 5px 0px;
+        display: flex;
+        clear: both;
+        margin-top: 30px;
+    }
+    #happiness .happyholder .happy{
+        width: 240px;
+        height: 240px;
+        flex: 0 0 auto;
+        float: none;
+    }
+    #happiness .happyholder .last{
+        margin-top: 10px;
+    }
+    #happiness .happyholder .third{
+        margin-top: 20px;
+    }
+    #happiness .happyholder .happy img{
+        width: auto;
+    }
+    #review .reviewholder{
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        padding: 20px 0px;
+        display: flex;
+    }
+    #review .reviewholder .buttons{
+        display: none;
+    }
+    #review .reviewholder .reviews{
+        width: 240px;
+        height: 240px;
+        flex: 0 0 auto;
+        float: none;
+        display: block;
+    }
+    #slider{
+        margin-top: 90px;
+        background-size: 100%;
+        height: 400px;
+    }
+    #slider .sliderBox{
+        display: none;
+    }
+    #slider .sliderContent{
+       margin-top: 50px;
+    }
+    #slider .sliderContent h1{
+        font-size: 22px;
+    }
+    #slider .sliderContent .paragraph{
+        width: 400px;
+        word-break: break-all;
+    }
+    #slider .sliderContent .buttons .subscribe, #slider .sliderContent .buttons .boxes{
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:749px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header{
+        text-align: center;
+    }
+    #header #menu{
+        display: block;
+        float: none;
+        position: absolute;
+        left: 5%;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+    }
+    #header a .logo{
+        width: 70px;
+        height: 37px;
+    }
+    #header div .signin{
+        margin: 0px;
+        font-size: 10px;
+        padding: 4px 16px;
+        margin-top: 5px;
+        float: none;
+        position: absolute;
+        right: 5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    #review .reviews{
+        margin-right: 2.3%;
+        display: block;
+    }
+    #review .buttons{
+        margin-right: 2.3%;
+    }
+    #video .smallvideo{
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        display: flex;
+    }
+    #video .smallvideo iframe{
+        width: 250px;
+        height: 250px;
+        flex: 0 0 auto;
+        float: none;
+    }
+    #video .bigvideo{
+        display: none;
+    }
+    #happiness .tools{
+        display: none;
+    }
+    #happiness .happyholder {
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        padding: 5px 0px;
+        display: flex;
+        clear: both;
+        margin-top: 30px;
+    }
+    #happiness .happyholder .happy{
+        width: 210px;
+        height: 210px;
+        flex: 0 0 auto;
+        float: none;
+        padding-bottom: 30px;
+    }
+    #happiness .happyholder .last{
+        margin-top: 10px;
+    }
+    #happiness .happyholder .third{
+        margin-top: 20px;
+    }
+    #happiness .happyholder .happy img {
+        width: auto;
+    }
+    #review .reviewholder{
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        padding: 20px 0px;
+        display: flex;
+    }
+    #review .reviewholder .buttons{
+        display: none;
+    }
+    #review .reviewholder .reviews{
+        width: 210px;
+        height: 210px;
+        flex: 0 0 auto;
+        float: none;
+        display: block;
+    }
+    
+    #plan h1, #happiness h1, #why h1, #footer h2, #review h1, #video h1{
+        font-size: 22px;
+    }
+    #plan .planholder{
+        text-align: center;
+        padding: 10px;
+    }
+    #plan .planholder .bottles{
+        width: 98%;
+        margin: auto 2%;
+        float: none;
+    }
+    #plan .planholder .bottles .bottle{
+        width: 50%;
+    }
+    #plan .planholder .gender{
+        float: none;
+        width: 80%;
+        margin: auto 10%;
+        text-align: center;
+    }
+    #plan .planholder .gender a img{
+        margin-top: -10px;
+        float: none;
+    }
+    #why .whys{
+        float: none;
+        text-align: center;
+        width: auto;
+    }
+    
+    #footer .foot{
+        padding: 20px 0px;
+    }
+    #footer .foot .socialfootlet{
+        margin-right: 0px;
+    }
+    
+    #slider{
+        margin-top: 78px;
+        background-size: cover;
+        height: 330px;
+    }
+    #slider .sliderBox{
+        display: none;
+    }
+    #slider .sliderContent{
+       margin-top: 10px;
+    }
+    #slider .sliderContent h1{
+        font-size: 18px;
+    }
+    #slider .sliderContent .paragraph{
+        width: 300px;
+        word-break: break-all;
+        font-size: 16px;
+    }
+    #slider .sliderContent .buttons .subscribe, #slider .sliderContent .buttons .boxes{
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    
+    
+}
+
+@media screen and (min-width:0px) and (max-width:400px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header{
+        text-align: center;
+    }
+    #header #menu{
+        display: block;
+        float: none;
+        position: absolute;
+        left: 5%;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+    }
+    #header a .logo{
+        width: 70px;
+        height: 37px;
+    }
+    #header div .signin{
+        margin: 0px;
+        font-size: 10px;
+        padding: 4px 16px;
+        margin-top: 5px;
+        float: none;
+        position: absolute;
+        right: 5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    #review .reviews{
+        margin-right: 2.3%;
+    }
+    #review .buttons{
+        margin-right: 2.3%;
+    }
+    #video .smallvideo{
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        display: flex;
+    }
+    #video .smallvideo iframe{
+        width: 250px;
+        height: 250px;
+        flex: 0 0 auto;
+        float: none;
+    }
+    #video .bigvideo{
+        display: none;
+    }
+    #happiness .tools{
+        display: none;
+    }
+    #happiness .happyholder {
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        padding: 5px 0px;
+        display: flex;
+        clear: both;
+        margin-top: 30px;
+    }
+    #happiness .happyholder .happy{
+        width: 210px;
+        height: 210px;
+        flex: 0 0 auto;
+        float: none;
+        padding-bottom: 30px;
+    }
+    #happiness .happyholder .last{
+        margin-top: 10px;
+    }
+    #happiness .happyholder .third{
+        margin-top: 20px;
+    }
+    #happiness .happyholder .happy img{
+        width: auto;
+    }
+    #review .reviewholder{
+        flex-wrap: nowrap;
+        text-align: center;
+        width: 100%;
+        margin: auto;
+        overflow-x: auto;
+        padding: 20px 0px;
+        display: flex;
+    }
+    #review .reviewholder .buttons{
+        display: none;
+    }
+    #review .reviewholder .reviews{
+        width: 210px;
+        height: 210px;
+        flex: 0 0 auto;
+        float: none;
+        display: block;
+    }
+    
+    #plan h1, #happiness h1, #why h1, #footer h2, #review h1, #video h1{
+        font-size: 22px;
+    }
+    #plan .planholder{
+        text-align: center;
+        padding: 5px;
+    }
+    #plan .planholder .bottles{
+        width: auto;
+        margin: auto 0px;
+        float: none;
+    }
+    #plan .planholder .bottles .bottle{
+        width: 50%;
+    }
+    #plan .planholder .bottles .bottle img{
+        margin-bottom: 15px;
+        height:86px;
+        width:120px;
+    }
+    #plan .planholder .gender{
+        float: none;
+        width: auto;
+        margin: 0px;
+        clear: both;
+        text-align: center;
+    }
+    #plan .planholder .gender a img{
+        margin: 0px;
+        margin-left: -10px;
+        float: none;
+    }
+    #why .whys{
+        float: none;
+        text-align: center;
+        width: auto;
+    }
+    #footer .firstp a{
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    #footer .foot{
+        padding: 20px 0px;
+    }
+    #footer .foot .footlet{
+        float: left;
+        margin: auto 10%;
+        margin-bottom: 10px;
+    }
+    #footer .foot .socialfootlet {
+        clear: both;
+        float: none;
+        width: auto;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    #footer .foot .lastfootlet {
+        clear: both;
+        float: none;
+        width: auto;
+        text-align: left;
+    }
+    #plan .planholder .plan1{
+        display: none;
+    }
+    #plan .planholder .plan2{
+        text-align: center;
+        float: none;
+    }
+    #plan .planholder .plan3{
+        text-align: center;
+        float: none;
+    }
+    #plan .planholder .plan2 img ,#plan .planholder .plan3 img{
+        width: auto;
+        height: auto;
+    }
+    
+    #slider{
+        margin-top: 78px;
+        background-size: cover;
+        height: 300px;
+    }
+    #slider .sliderBox{
+        display: none;
+    }
+    #slider .sliderContent{
+       margin-top: 10px;
+    }
+    #slider .sliderContent h1{
+        font-size: 18px;
+    }
+    #slider .sliderContent .paragraph{
+        width: 260px;
+        word-break: break-all;
+        font-size: 16px;
+    }
+    #slider .sliderContent .buttons .subscribe, #slider .sliderContent .buttons .boxes{
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+    
+}
+
+

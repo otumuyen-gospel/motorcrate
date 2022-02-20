@@ -1,0 +1,896 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 13, 2020, 1:10:19 AM
+    Author     : Gospel system
+*/
+input:focus, textarea:focus {
+border: 1.2px solid #427aa1 !important;
+box-shadow: 0 0 3px #427aa1 !important;
+-moz-box-shadow: 0 0 3px #427aa1 !important;
+-webkit-box-shadow: 0 0 3px #427aa1 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+outline-offset: 0px !important;
+outline: none !important;
+}
+.frmStripePayment{
+    border:#E0E0E0 1px solid;
+    padding: 20px 30px;
+    width: 180px;
+    text-align: center;
+    margin-top: 60px auto;
+    font-family: Arial;
+}
+.plan-caption{
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    font-family: Arial;
+}
+body{
+    background-color: #f1f1f1;
+    font-family: noto sans;
+}
+#wrapper{
+    width: 100%;
+}
+body ,h1,h2,h3,h4,h5,h6,p{
+    margin:0px;
+}
+a, img, a img{
+    text-decoration: none;
+    border:none;
+}
+.cb{
+    clear: both;
+}
+#header{
+    width: 90%;
+    padding:20px 5%;
+    overflow: hidden;
+    border-bottom: 2px solid #ccc;
+    position: fixed;
+    top:0px;
+    background-color: #f1f1f1;
+    left: 0px;
+    z-index: 100;
+}
+#header div a{
+    float: left;
+    margin-right: 6%;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 14px;
+    color: #233D4D;
+}
+#header div .subscribe{
+    border-radius: 50px;
+    padding: 8px 20px;
+    margin-left: -4%;
+    margin-right: 2.5%;
+    margin-top: 30px;
+    text-align: center;
+    border:2px solid #233D4D;
+}
+#header div .subscribe:hover{
+    background-color:#233D4D;
+    border:2px solid #233D4D;
+    color: #fff;
+}
+#header div .signin{
+    border-radius: 50px;
+    padding: 8px 35px;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: -4%;
+    color: #fff;
+    border:2px solid #FE7F2D;
+    background-color: #FE7F2D;
+}
+#header div .signin:hover{
+    background-color: #FFA164;
+    border:2px solid #FFA164;
+    color: #fff;
+}
+#header div .target{
+    margin-top: 40px;
+}
+#header div .target:hover{
+    color: #FE7F2D;
+}
+#header #menu{
+    display: none;
+}
+#sidebar{
+    position: fixed;
+    top:0px;
+    left:0px;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    display: none;
+}
+#sidebar div{
+    background-color: #f1f1f1;
+    padding: 10px 0px;
+    width: 300px;
+    height: 100vh;
+    text-align: center;
+    overflow-y: auto;
+}
+#sidebar div #close{
+    position: relative;
+    left: 110px;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 50px;
+}
+#sidebar div p{
+    padding: 13px;
+    border-bottom: 0.1px solid #ccc;
+    color: #233D4D;
+}
+#sidebar div p a{
+    color: inherit;
+}
+#sidebar div p:hover{
+    color:#fff;
+    background-color: #233D4D;
+}
+
+#sidebar div nav{
+    margin-top: 30px;
+}
+#sidebar div nav a img{
+    margin: auto 2px;
+}
+#billing{
+    overflow: hidden;
+    margin: 127px 0px 60px 0px;
+}
+#billing .nav1{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #427AA1;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+#billing .nav1 img{
+    margin-bottom: 0px;
+    position: relative;
+    top:3px;
+    left:-5px;
+}
+#billing .top{
+    width: 90%;
+    margin: 25px 5%;
+    overflow: hidden;
+
+}
+#billing .top1{
+    width: 60%;
+    margin-right: 6.5%;
+    float: left;
+    overflow: hidden;
+}
+#billing .top1 nav nav{
+    margin-left:65px;
+}
+#billing .top1 .bar1{
+    background-color: lavender;
+    padding: 15px;
+    overflow: hidden;
+}
+#billing .top1 .bar1 .number{
+    border-radius: 100px;
+    border:1.5px solid #233D4D;
+    position: absolute;
+    left: 7%;
+    margin-top: -6px;
+    padding: 8px 8px 10px 8px;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+}
+#billing .top1 .bar1 .drop-down-icon{
+    float: right;
+}
+#billing .top1 #topfirstTable{
+    margin: 20px;
+    width: 100%;
+    text-align: left;
+}
+#billing .top1 #topfirstTable .topNav{
+    display: block;
+    width: 100%;
+    margin: 0px;
+}
+#billing .top1 #topfirstTable .topNav nav{
+    width: 50%;
+    margin: 0px;
+    float: left;
+}
+#billing .top1 #topfirstTable .topNav nav .short{
+    padding: 8px;
+    width: 84%;
+    border:1.2px solid #ccc;
+    font-size: 15px;
+}
+#billing .top1 #topfirstTable .bottomNav{
+    margin-top: 0px;
+}
+#billing .top1 #topfirstTable .bottomNav .long{
+    padding: 8px;
+    width: 92%;
+    border:1.2px solid #ccc;
+    font-size: 15px;
+}
+#billing .top1 #topfirstTable input{
+    margin: 5px auto;
+}
+#billing .top1 p{
+    text-align: center;
+}
+#billing .top1 button{
+    border-radius: 50px;
+    padding: 8px 50px;
+    text-align: center;
+    background-color:#233D4D;
+    border:2px solid #233D4D;
+    color: #fff;
+}
+#billing .top1 button:hover{
+    background-color:#222D4D;
+    border:2px solid #222D4D;
+    color: #fff;
+}
+#billing .top2{
+    width: 31%;
+    float: left;
+    padding: 10px 1%;
+    overflow: hidden;
+    background-color: #fff;
+    border-top: 4px solid #222D4D;
+}
+#billing .top2 table{
+    width: 100%;
+    color: #222D4D;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+#billing .top2 table thead th{
+    padding: 20px 0px;
+}
+#billing .top2 table tbody tr{
+    border-top: 1.4px solid #ccc;
+    border-bottom: 1.4px solid #ccc;
+}
+#billing .top2 table tbody tr td{
+    padding: 20px;
+}
+#billing .top2 table tfoot tr td {
+    padding: 15px 15px 25px 15px;
+    background-color: #222D4D;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top:10px;
+    overflow: hidden;
+}
+#billing .top2 table tfoot tr td .left{
+    float: left;
+}
+#billing .top2 table tfoot tr td .right{
+    float: right;
+}
+#billing .bottom{
+    width: 89.6%;
+    margin: auto 5%;
+}
+#billing .bottom .bar2 nav{
+    margin-left:65px;
+}
+#billing .bottom .bar2{
+    background-color: lavender;
+    padding: 15px;
+    overflow: hidden;
+}
+#billing .bottom .bar2 .number{
+    border-radius: 100px;
+    border:1.5px solid #233D4D;
+    position: absolute;
+    left: 7%;
+    margin-top: -6px;
+    padding: 8px 8px 10px 8px;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+}
+#billing .bottom .bar2 .drop-down-icon{
+    float: right;
+}
+#billing .bottom .bottom1{
+    float: left;
+    width: 35%;
+    margin-top: 20px;
+    margin-right: 5%;
+}
+#billing .bottom .bottom1 p{
+    border-top: 0.5px solid #ddd;
+    border-bottom: 0.5px solid #ddd;
+    padding: 10px;
+    color: #233D4D;
+    cursor: pointer;
+}
+#billing .bottom .bottom1 #card{
+    background-color: #fff;
+    border-left: 5px solid #233D4D;
+}
+#billing .bottom .bottom2{
+    float: left;
+    width: 60%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.middleTable, .lastTable, .firsttable, #paypal, #card, #cancel{
+   display: none;
+}
+#billing .bottom .bottom2 .firsttable{
+    padding: 20px;
+    background-color: #fff;
+    width: 99.5%;
+    border-collapse: collapse;
+}
+
+#billing .bottom .bottom2 .firsttable .topmost{
+    border-bottom: 1.4px solid #ccc;
+    padding-bottom: 5px;
+    margin: 10px 0px 0px 0px;
+    width: 90%;
+}
+#billing .bottom .bottom2 .firsttable .topmost img{
+    position:absolute;
+    margin: 0px;
+    width: 24px;
+    height: 24px;
+}
+#billing .bottom .bottom2 .firsttable .topmost span{
+    margin: 10px 0px 0px 40px;
+}
+#billing .bottom .bottom2 .firsttable nav{
+    text-align: left;
+    display: inline-block;
+    margin: 10px 0px 10px 0px;
+    color: #444;
+}
+#billing .bottom .bottom2 .firsttable .bottomNav{
+    width: 100%;
+}
+#billing .bottom .bottom2 .firsttable .bottomNav input{
+    width: 80%;
+    padding: 10px;
+    border:1px solid #ccc;
+    margin-top: 5px;
+}
+#billing .bottom .bottom2 .firsttable .bottomNav2{
+    width: 100%;
+}
+#billing .bottom .bottom2 .firsttable .bottomNav2 input{
+    width: 50%;
+    padding: 10px;
+    border:1px solid #ccc;
+    margin-top: 5px;
+}
+#billing .bottom .bottom2 .firsttable .topNav{
+    width: 80%;
+    display: inline-block;
+}
+#billing .bottom .bottom2 .firsttable .topNav nav{
+    width: 35%;
+    margin-right: 40px;
+}
+#billing .bottom .bottom2 .firsttable .topNav .secondNav{
+    width: 35%;
+    margin-right: 0px;
+}
+#billing .bottom .bottom2 .firsttable .topNav nav input{
+    width: 100%;
+    padding: 10px;
+    border:1px solid #ccc;
+    margin-top: 5px;
+}
+#billing .bottom .bottom2 .firsttable .proceed{
+    text-align: center;
+    margin-top: 20px;
+}
+#billing .bottom .bottom2 .firsttable .proceed button{
+    border-radius: 50px;
+    padding: 8px 50px;
+    background-color:#233D4D;
+    border:2px solid #233D4D;
+    color: #fff;
+}
+
+#billing .bottom .bottom2 .firsttable div button:hover{
+    background-color:#222D4D;
+    border:2px solid #222D4D;
+    color: #fff;
+}
+#billing .bottom .bottom2 .lastTable{
+    width: 99.5%;
+    background-color: #f1f1f1;
+    border-collapse: collapse;
+    border:1.4px solid #ccc;
+}
+#billing .bottom .bottom2 .lastTable .thead nav{
+    border-bottom: 1.4px solid #ccc;
+    padding-bottom: 5px;
+    margin: 10px 0px 0px 20px;
+    width: 90%;
+}
+#billing .bottom .bottom2 .lastTable .thead nav img{
+    position:absolute;
+    margin: 1px 0px 0px 0px;
+    width: 24px;
+    height: 24px;
+
+}
+#billing .bottom .bottom2 .lastTable .thead nav span{
+    margin: 10px 0px 0px 25px;
+}
+#billing .bottom .bottom2 .lastTable p{
+    text-align: center;
+    margin: 100px auto;
+    color: blue;
+}
+#billing .bottom .bottom2 .lastTable p a{
+    color: blue;
+}
+#billing .bottom .bottom2 .middleTable{
+    width: 99.5%;
+    background-color: #f1f1f1;
+    border-collapse: collapse;
+    border:1.4px solid #ccc;
+}
+#billing .bottom .bottom2 .middleTable .thead nav{
+    border-bottom: 1.4px solid #ccc;
+    padding-bottom: 5px;
+    margin: 10px 0px 0px 20px;
+    width: 90%;
+}
+#billing .bottom .bottom2 .middleTable .thead nav img{
+    position:absolute;
+    margin: 1px 0px 0px 0px;
+    width: 24px;
+    height: 24px;
+}
+#billing .bottom .bottom2 .middleTable .thead nav span{
+    margin: 10px 0px 0px 25px;
+}
+#billing .bottom .bottom2 .middleTable p{
+    text-align: center;
+    margin: 100px auto;
+    color: blue;
+}
+#billing .bottom .bottom2 .middleTable p a{
+    color: blue;
+}
+
+#footer{
+    margin-top: 40px;
+    background-color: #427AA1;
+    overflow: hidden;
+}
+#footer .firstpart{
+     background:url("assets/footerbg.png");
+     overflow: hidden;
+     background-size: cover;
+     min-height: 222px;
+}
+#footer .foot{
+    padding: 50px 5% 0px 5%;
+    overflow: hidden;
+}
+#footer .footlet{
+    float: left;
+    width: 24%;
+    margin-right: 1.2%;
+
+}
+#footer .footlet nav{
+    display: inline-block;
+}
+#footer .footlet *{
+    margin-bottom: 15px;
+}
+#footer p{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17px;
+    font-family: barlow;
+
+}
+#footer p,#footer a,#footer h2,#footer h3{
+    color: #fff;
+    text-decoration: none;
+}
+#footer h3{
+    font-size: 17px;
+    line-height: 23px;
+}
+#footer h2{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 41px;
+    letter-spacing: 0.06em;
+}
+#footer h2, #footer .firstp, #footer .lastp{
+    text-align: center;
+    margin-top: 40px;
+}
+#footer .lastp{
+    font-family: noto sans;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 23px;
+    background-color: #233d4d;
+}
+#footer .firstp{
+    margin-bottom: 40px;
+}
+#footer .firstp a{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+    background: #FE7F2D;
+    border-radius: 33px;
+    padding: 10px 20px;
+    color: #FFFFFF;
+}
+#footer .firstp a:hover{
+    background-color: #FFA164;
+    color: #fff;
+}
+#footer .foot .lastfootlet{
+    margin-right: 0px;
+}
+#footer .social{
+    width: 64px;
+    height: 37px;
+    margin-right:12.8px;
+}
+#footer .lastsocials{
+    margin-right: 0px;
+}
+#footer .footerfirstnav{
+    margin-bottom: 10px;
+}
+#footer .footerfirstnav *{
+    margin:0px 5px;
+}
+@media screen and (min-width: 1300px) and (max-width:1450px) {
+  
+    #header div a{
+       margin-right: 5.05%;
+    }
+    
+}
+@media screen and (min-width: 1220px) and (max-width:1299px) {
+  
+    #header div a{
+       margin-right: 5.5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+}
+@media screen and (min-width:1060px) and (max-width:1219px) {
+    #header div a{
+       margin-right: 5.5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width:750px) and (max-width:1059px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header #menu{
+        display: block;
+        float: left;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+        margin-right: 38%;
+    }
+    #header a .logo{
+        width: 100px;
+        height: 53px;
+        
+    }
+    #header div .signin{
+        float: right;
+        margin: 0px;
+        font-size: 13px;
+        padding: 4px 16px;
+        margin-top: 10px;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    #billing{
+        margin-top: 98px;
+    }
+    #billing .top .top1 #topfirstTable{
+        margin: auto 0px;
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    
+}
+
+@media screen and (min-width:401px) and (max-width:749px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header{
+        text-align: center;
+    }
+    #header #menu{
+        display: block;
+        float: none;
+        position: absolute;
+        left: 5%;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+    }
+    #header a .logo{
+        width: 70px;
+        height: 37px;
+    }
+    #header div .signin{
+        margin: 0px;
+        font-size: 10px;
+        padding: 4px 16px;
+        margin-top: 5px;
+        float: none;
+        position: absolute;
+        right: 5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+    #footer h2{
+        font-size: 22px;
+    }
+    
+    #footer .foot{
+        padding: 20px 0px;
+    }
+    #footer .foot .socialfootlet{
+        margin-right: 0px;
+    }
+    #billing{
+        margin: 0px;
+        margin-top: 80px;
+    }
+    #billing .top{
+        margin-top: 10px;
+    }
+    #billing .top .top1, #billing .top .top2{
+        float: none;
+        margin: 20px 1%;
+        width: 98%;
+    }
+    #billing .top .top1 {
+        margin: auto 0px;
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    #billing .top .top1 #topfirstTable{
+        margin: auto 0px;
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    #billing .top .top1 button{
+        padding: 5px 20px;
+        font-size: 14px;
+        margin:10px auto;
+    }
+    #billing .top .top2 *{
+        font-size: 15px;
+    }
+    
+    #billing .bottom .bottom1, #billing .bottom .bottom2{
+        float: none;
+        margin: 20px 1%;
+        width: 98%;
+    }
+    #billing .bottom .bottom1 table{
+        margin: auto 0px;
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    #billing .bottom .bottom2 .firsttable .proceed button{
+        padding: 5px 10px;
+        font-size: 12px;
+        margin:10px auto;
+    }
+    #billing .bottom .bottom2 .firsttable .bottomNav2 input, 
+    #billing .bottom .bottom2 .firsttable .topNav nav input{
+        width: 80%;
+    }
+    #billing .bottom .bottom2 *{
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (min-width:0px) and (max-width:400px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header{
+        text-align: center;
+    }
+    #header #menu{
+        display: block;
+        float: none;
+        position: absolute;
+        left: 5%;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+    }
+    #header a .logo{
+        width: 70px;
+        height: 37px;
+    }
+    #header div .signin{
+        margin: 0px;
+        font-size: 10px;
+        padding: 4px 16px;
+        margin-top: 5px;
+        float: none;
+        position: absolute;
+        right: 5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+    #footer h2{
+        font-size: 22px;
+    }
+    #footer .firstp a{
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    #footer .foot{
+        padding: 20px 0px;
+    }
+    #footer .foot .footlet{
+        margin: auto 10%;
+        margin-bottom: 10px;
+    }
+    #footer .foot .socialfootlet {
+        clear: both;
+        float: none;
+        width: auto;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    #footer .foot .lastfootlet {
+        clear: both;
+        float: none;
+        width: auto;
+        text-align: left;
+    }
+    #billing{
+        margin: 0px;
+        margin-top: 80px;
+    }
+    #billing .top{
+        margin-top: 10px;
+    }
+    #billing .top .top2{
+        float: none;
+        margin: 20px 1%;
+        width: 98%;
+    }
+    #billing .top .top1{
+        float: none;
+        margin: 20px auto;
+        width: 100%;
+    }
+    #billing .top .top1 #topfirstTable{
+        margin: auto 0px;
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    #billing .top .top1 button{
+        padding: 5px 20px;
+        font-size: 14px;
+        margin:10px auto;
+    }
+    #billing .top .top2 *{
+        font-size: 15px;
+    }
+    
+    #billing .bottom .bottom1, #billing .bottom .bottom2{
+        float: none;
+        margin: 20px 1%;
+        width: 98%;
+    }
+    #billing .bottom .bottom1 table{
+        margin: auto 0px;
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    #billing .bottom .bottom2 .firsttable .proceed button{
+        padding: 5px 10px;
+        font-size: 12px;
+        margin:10px auto;
+    }
+    #billing .bottom .bottom2 .firsttable .bottomNav2 input, 
+    #billing .bottom .bottom2 .firsttable .topNav nav input{
+        width: 80%;
+    }
+    #billing .bottom .bottom2 .lastTable, #billing .bottom .bottom2 .middleTable{
+        width: 99%;
+    }
+    #billing .bottom .bottom2 *{
+        font-size: 15px;
+    }
+    
+    
+}
+
+
+

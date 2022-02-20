@@ -1,0 +1,85 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 30, 2020, 2:54:38 PM
+    Author     : Gospel system
+*/
+#id{
+    -fx-font-size: 20px;
+}
+#action{
+    -fx-background-color:#eee;
+    -fx-text-fill:black;
+    -fx-padding:5px;
+}
+#why{
+    -fx-text-fill:#233D4D;
+    -fx-font-size: 18px;
+}
+#email{
+    -fx-text-fill:blueviolet;
+    -fx-font-size: 16px;
+}
+#root{
+    -fx-background-image:url("bg.png");
+    -fx-background-size:100%;
+}
+#holder{
+    -fx-font-size: 20px;
+    -fx-padding:10px 20px;
+    -fx-font-weight:bolder;
+    -fx-background-color:rgb(0,0,200,0.7);
+    -fx-text-fill:#fff;
+}
+#viewLabel{
+    -fx-font-size: 14px;
+    -fx-padding:8px;
+    -fx-font-weight:bolder;
+    -fx-background-color:rgb(50,20,100,0.7);
+    -fx-text-fill:#fff;
+}
+#button{
+    -fx-font-size: 15px;
+    -fx-padding:5px 20px;
+    -fx-background-color:blueviolet;
+    -fx-text-fill:#fff;
+    -fx-border-radius:5px;
+}
+#close{
+    -fx-font-size: 15px;
+    -fx-padding:5px 20px;
+    -fx-background-color:crimson;
+    -fx-text-fill:#fff;
+    -fx-border-radius:5px;
+}
+.text-field{
+    -fx-font-size: 15px;
+    -fx-padding:5px 20px;
+}
+.label{
+    -fx-font-size: 15px;
+}
+.combo-box{
+    -fx-font-size: 15px;
+    -fx-padding:1px 20px;
+}
+
+#bottom{
+    -fx-padding:10px;
+}
+#author{
+    -fx-font-size: 11px;
+}
+#create{
+    -fx-padding:40px 0px;
+}
+#search{
+    -fx-padding:10px;
+    -fx-background-color:skyblue;
+}
+
+
+

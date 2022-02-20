@@ -1,0 +1,1045 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 13, 2020, 1:10:19 AM
+    Author     : Gospel system
+*/
+input:focus, textarea:focus {
+border: 1px solid #427aa1 !important;
+box-shadow: 0 0 3px #427aa1 !important;
+-moz-box-shadow: 0 0 3px #427aa1 !important;
+-webkit-box-shadow: 0 0 3px #427aa1 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+outline-offset: 0px !important;
+outline: none !important;
+}
+
+body{
+    background-color: #f1f1f1;
+    font-family: noto sans;
+}
+#wrapper{
+    width: 100%;
+}
+body ,h1,h2,h3,h4,h5,h6,p{
+    margin:0px;
+}
+a, img, a img{
+    text-decoration: none;
+    border:none;
+}
+.cb{
+    clear: both;
+}
+#header{
+    width: 90%;
+    padding:20px 5%;
+    overflow: hidden;
+    border-bottom: 2px solid #ccc;
+    position: fixed;
+    top:0px;
+    background-color: #f1f1f1;
+    left: 0px;
+    z-index: 100;
+}
+#header div a{
+    float: left;
+    margin-right: 6%;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 14px;
+    color: #233D4D;
+}
+
+#header div .subscribe{
+    border-radius: 50px;
+    padding: 8px 20px;
+    margin-left: -4%;
+    margin-right: 2.5%;
+    margin-top: 30px;
+    text-align: center;
+    border:2px solid #233D4D;
+}
+#header div .subscribe:hover{
+    background-color:#233D4D;
+    border:2px solid #233D4D;
+    color: #fff;
+}
+#header div .signin{
+    border-radius: 50px;
+    padding: 8px 35px;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: -4%;
+    color: #fff;
+    border:2px solid #FE7F2D;
+    background-color: #FE7F2D;
+}
+#header div .signin:hover{
+    background-color: #FFA164;
+    border:2px solid #FFA164;
+    color: #fff;
+}
+#header div .target{
+    margin-top: 40px;
+}
+#header div .target:hover{
+    color: #FE7F2D;
+}
+#header #menu{
+    display: none;
+}
+#sidebar{
+    position: fixed;
+    top:0px;
+    left:0px;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    display: none;
+}
+#sidebar div{
+    background-color: #f1f1f1;
+    padding: 10px 0px;
+    width: 300px;
+    height: 100vh;
+    text-align: center;
+    overflow-y: auto;
+}
+#sidebar div #close{
+    position: relative;
+    left: 110px;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 50px;
+}
+#sidebar div p{
+    padding: 13px;
+    border-bottom: 0.1px solid #ccc;
+    color: #233D4D;
+}
+#sidebar div p a{
+    color: inherit;
+}
+#sidebar div p:hover{
+    color:#fff;
+    background-color: #233D4D;
+}
+
+#sidebar div nav{
+    margin-top: 30px;
+}
+#sidebar div nav a img{
+    margin: auto 2px;
+}
+#account{
+    overflow: hidden;
+    width: 90%;
+    margin: 150px 5% 25px 5%;
+    text-align: center;
+    overflow: hidden;
+}
+#account .notification{
+    background: #FFF7F1;
+    border: 1px solid #FE7F2D;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 15px;
+}
+#account .notification *{
+    font-size: 17px;
+    line-height: 25px;
+    color: #FE7F2D;
+}
+#account .dashboard_title{
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    color: #427AA1;
+    margin: 20px auto;
+}
+#account .boxes{
+    overflow: hidden;
+    margin: 10px 0px 20px 0px;
+    width: 100%;
+}
+#account .boxes .one{
+    background-color: #fff;
+    border: 1px solid #808080;
+    border-top: none;
+    width: 32%;
+    margin-right: 1.75%;
+    float: left;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#account .boxes .one h3{
+    padding: 5px;
+    margin-bottom: 60px;
+    background: #233D4D;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+#account .boxes .one h4{
+    margin-bottom: 40px;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    color: #427AA1;
+}
+#account .boxes .one .order{
+    margin:0px;
+    margin-top: -20px;
+    padding-left:15px;
+    text-align: left;
+}
+#account .boxes .one .plan_info{
+    margin:0px;
+    padding-left:15px;
+    text-align: left;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #427AA1;
+}
+#account .boxes .one .dashboard_btn{
+    margin-top: 26px;
+    text-align: center;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #427AA1;
+    padding: 7px;
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #427AA1;
+    box-sizing: border-box;
+    border-radius: 9px;
+}
+#account .boxes .one  p{
+    margin-bottom: 20px;
+    text-align: center;
+}
+#account .boxes .one p a{
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+    color: #233D4D;
+}
+
+#account .boxes .two{
+    background-color: #fff;
+    border: 1px solid #808080;
+    border-top: none;
+    width: 32%;
+    margin-right: 1.75%;
+    float: left;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#account .boxes .two h3{
+    padding: 5px;
+    margin-bottom: 60px;
+    background: #233D4D;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+#account .boxes .two nav{
+    background: #F1F1F1;
+    font-family: Noto Sans;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: #233D4D;
+    margin-top: -12.5px;
+    padding: 20px;
+    display: inline-block;
+    width: 80%;
+}
+#account .boxes .two nav img{
+    margin-right: 20px;
+}
+#account .boxes .two .dashboard_btn{
+    margin-top: 17px;
+    text-align: center;
+    cursor: pointer;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #427AA1;
+    padding: 7px;
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #427AA1;
+    box-sizing: border-box;
+    border-radius: 9px;
+}
+#account .boxes .two h4{
+    margin-bottom: 40px;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    color: #427AA1;
+}
+#account .boxes .two  p{
+    margin-bottom: 20px;
+    text-align: center;
+}
+#account .boxes .two p a{
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+    color: #233D4D;
+}
+#account .boxes .three{
+    background-color: #fff;
+    border: 1px solid #808080;
+    border-top: none;
+    width: 32%;
+    margin-right: 0px;
+    float: left;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#account .boxes .three h3{
+    padding: 5px;
+    margin-bottom: 60px;
+    background: #233D4D;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+#account .boxes .three h4{
+    margin-bottom: 24px;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    color: #427AA1;
+    padding-left: 10px;
+    text-align: left;
+}
+#account .boxes .three h4 span{
+    color:#999;
+    overflow-wrap: break-word;
+
+}
+#account .boxes .three  p{
+    margin-bottom: 10px;
+    padding-left: 10px;
+    text-align: left;
+}
+#account .boxes .three p a{
+    text-decoration: underline;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    color: #427AA1;
+
+}
+
+#profile{
+    position: fixed;
+    top:0px;
+    left:0px;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100vh;
+    z-index: 150;
+    display: none;
+}
+#profile .profileForm{
+    background-color: #f1f1f1;
+    padding: 20px;
+    width: 300px;
+    margin-top: 50px;
+    text-align: left;
+}
+#profile .profileForm p{
+    margin-bottom: 20px;
+}
+#profile .profileForm p label{
+   color: #222D4D;
+}
+#profile .profileForm img{
+    width: 16px;
+    height: 16px;
+    position: relative;
+    left: 98%;
+    top:-8px;
+    cursor: pointer;
+}
+#profile .profileForm h4{
+    margin-bottom:10px; 
+    position: relative;
+    top: -8px;
+    color: #222D4D;
+}
+#profile .profileForm p input{
+    padding: 10px 0px;
+    width: 99%;
+    border:1.2px solid #eee;
+}
+#profile .profileForm p .updateBtn{
+    padding: 10px;
+    width: auto;
+    background-color: #233D4D;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+#closeit{
+    border-radius: 50px;
+    padding: 8px 16px;
+    text-align: center;
+    margin: 30px auto;
+    color: #fff;
+    border:2px solid #FE7F2D;
+    background-color: #FE7F2D;
+}
+#closeit:hover{
+    background-color: #FFA164;
+    border:2px solid #FFA164;
+    color: #fff;
+}
+#operations{
+    background-color: #fff;
+    padding: 30px;
+    width: auto;
+    margin: auto 5%;
+    margin-bottom: 70px;
+}
+
+#operations .referalBox{
+    overflow: hidden;
+}
+#operations .referalBox .referaltext{
+    float: left;
+     width: 50%;
+}
+#operations .referalBox .referaltext h1{
+    font-weight: bolder;
+    font-size: 29px;
+    line-height: 43px;
+    letter-spacing: 0.02em;
+    color: #427AA1;
+    margin-bottom: 10px;
+}
+#operations .referalBox .referaltext p{
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #313131;
+
+}
+#operations .referalBox .referallink{
+    float: right;
+    width: 50%;
+}
+#operations .referalBox .referallink span{
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #313131;
+}
+#operations .referalBox .referallink nav{
+    margin-top: 10px;
+    width: 100%;
+}
+#operations .referalBox .referallink nav input{
+    border: 1px solid #427AA1;
+    box-sizing: border-box;
+    border-radius: 23px;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: left;
+    letter-spacing: 0.02em;
+    color: #313131;
+    background-color: #FFFFFF;
+    padding: 8px 15px;
+    width: 80%;
+    margin-right: 20px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 80px;
+  background-color: #eee;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+#operations .referalBox .referallink nav img:hover{
+    cursor: pointer;
+}
+#footer{
+    background-color: #427AA1;
+    overflow: hidden;
+}
+#footer .firstpart{
+     background:url("assets/footerbg.png");
+     overflow: hidden;
+     background-size: cover;
+     min-height: 222px;
+}
+#footer .foot{
+    padding: 50px 5% 0px 5%;
+    overflow: hidden;
+}
+#footer .footlet{
+    float: left;
+    width: 24%;
+    margin-right: 1.2%;
+}
+#footer .footlet nav{
+    display: inline-block;
+}
+#footer .footlet *{
+    margin-bottom: 15px;
+}
+#footer p{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17px;
+    font-family: barlow;
+
+}
+#footer p,#footer a,#footer h2,#footer h3{
+    color: #fff;
+    text-decoration: none;
+}
+#footer h3{
+    font-size: 17px;
+    line-height: 23px;
+}
+#footer h2{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 41px;
+    letter-spacing: 0.06em;
+}
+#footer h2, #footer .firstp, #footer .lastp{
+    text-align: center;
+    margin-top: 40px;
+}
+#footer .lastp{
+    font-family: noto sans;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 23px;
+    background-color: #233d4d;
+}
+#footer .firstp{
+    margin-bottom: 40px;
+}
+#footer .firstp a{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+    background: #FE7F2D;
+    border-radius: 33px;
+    padding: 10px 20px;
+    color: #FFFFFF;
+}
+#footer .firstp a:hover{
+    background-color: #FFA164;
+    color: #fff;
+}
+#footer .foot .lastfootlet{
+    margin-right: 0px;
+}
+#footer .social{
+    width: 64px;
+    height: 37px;
+    margin-right:12.8px;
+}
+#footer .lastsocials{
+    margin-right: 0px;
+}
+#footer .footerfirstnav{
+    margin-bottom: 10px;
+}
+#footer .footerfirstnav *{
+    margin:0px 5px;
+}
+@media screen and (min-width: 1350px) and (max-width:1450px) {
+  
+    #header div a{
+       margin-right: 5.05%;
+    }
+    
+}
+@media screen and (min-width: 1300px) and (max-width:1349px) {
+  
+    #header div a{
+       margin-right: 5.05%;
+    }
+    
+    #account .boxes .one{
+        width: 46%;
+        margin-right: 4%;
+    }
+    #account .boxes .two{
+        width: 46%;
+        margin-right: 0px;
+        float: left;
+    }
+    #account .boxes .three{
+        width: 46%;
+        margin-right: 0px;
+    }
+    
+}
+@media screen and (min-width: 1220px) and (max-width:1299px) {
+  
+    #header div a{
+       margin-right: 5.5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    
+    
+    #account .boxes .one{
+        width: 46%;
+        margin-right: 4%;
+    }
+    #account .boxes .two{
+        width: 46%;
+        margin-right: 0px;
+        float: left;
+    }
+    #account .boxes .three{
+        width: 46%;
+        margin-right: 0px;
+    }
+    
+}
+@media screen and (min-width:1060px) and (max-width:1219px) {
+    #header div a{
+       margin-right: 5.5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+    #account .boxes .one{
+        width: 46%;
+        margin-right: 4%;
+    }
+    #account .boxes .two{
+        width: 46%;
+        margin-right: 0px;
+        float: left;
+    }
+    #account .boxes .three{
+        width: 46%;
+        margin-right: 0px;
+    }
+    
+}
+
+@media screen and (min-width:750px) and (max-width:1059px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header #menu{
+        display: block;
+        float: left;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+        margin-right: 38%;
+    }
+    #header a .logo{
+        width: 100px;
+        height: 53px;
+        
+    }
+    #header div .signin{
+        float: right;
+        margin: 0px;
+        font-size: 13px;
+        padding: 4px 16px;
+        margin-top: 10px;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    #payment{
+        margin-top: 100px;
+    }
+    
+    #account{
+        margin-top: 100px;
+    }
+    #account .boxes{
+        margin-top: -5px;
+    }
+    #account .dashboard_title{
+        font-size: 25px;
+        margin-bottom: 1px;
+    }
+    #account .boxes .one{
+        width: auto;
+        margin: 40px 0px;
+        float: none;
+    }
+    #account .boxes .one .dashboard_btn{
+        width: 50%;
+    }
+    #account .boxes .two{
+        width: auto;
+        margin: 40px 0px;
+        float: none;
+    }
+    #account .boxes .two .dashboard_btn{
+        width: 50%;
+    }
+    #account .boxes .three{
+        width: auto;
+        margin: 40px 0px;
+        float: none;
+    }
+    
+}
+
+@media screen and (min-width:401px) and (max-width:749px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header{
+        text-align: center;
+    }
+    #header #menu{
+        display: block;
+        float: none;
+        position: absolute;
+        left: 5%;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+    }
+    #header a .logo{
+        width: 70px;
+        height: 37px;
+    }
+    #header div .signin{
+        margin: 0px;
+        font-size: 10px;
+        padding: 4px 16px;
+        margin-top: 5px;
+        float: none;
+        position: absolute;
+        right: 5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+    #footer h2{
+        font-size: 22px;
+    }
+    
+    #footer .foot{
+        padding: 20px 0px;
+    }
+    #footer .foot .socialfootlet{
+        margin-right: 0px;
+    }
+    
+    
+    #account{
+        margin-top: 80px;
+    }
+    #account .boxes{
+        margin-top: -5px;
+    }
+    #account .dashboard_title{
+        font-size: 25px;
+        margin-bottom: 1px;
+    }
+    #account .boxes .one{
+        width: auto;
+        margin: 40px 0px;
+        float: none;
+    }
+    #account .boxes .one .dashboard_btn{
+        width: 50%;
+    }
+    #account .boxes .two{
+        width: auto;
+        margin: 40px 0px;
+        float: none;
+    }
+    #account .boxes .two .dashboard_btn{
+        width: 50%;
+    }
+    #account .boxes .three{
+        width: auto;
+        margin: 40px 0px;
+        float: none;
+    }
+    
+    #operations{
+        margin: 0px;
+    }
+    #operations .referalBox .referaltext{
+        width: auto;
+        float: none;
+    }
+    #operations .referalBox .referallink{
+        width: auto;
+        float: none;
+        margin-top: 50px;
+    }
+    #closeit{
+        margin-top: 50px;
+    }
+    
+    
+}
+
+@media screen and (min-width:0px) and (max-width:400px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header{
+        text-align: center;
+    }
+    #header #menu{
+        display: block;
+        float: none;
+        position: absolute;
+        left: 5%;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+    }
+    #header a .logo{
+        width: 70px;
+        height: 37px;
+    }
+    #header div .signin{
+        margin: 0px;
+        font-size: 10px;
+        padding: 4px 16px;
+        margin-top: 5px;
+        float: none;
+        position: absolute;
+        right: 5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+    #footer h2{
+        font-size: 22px;
+    }
+    #footer .firstp a{
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    #footer .foot{
+        padding: 20px 0px;
+    }
+    #footer .foot .footlet{
+        margin: auto 10%;
+        margin-bottom: 10px;
+    }
+    #footer .foot .socialfootlet {
+        clear: both;
+        float: none;
+        width: auto;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    #footer .foot .lastfootlet {
+        clear: both;
+        float: none;
+        width: auto;
+        text-align: left;
+    }
+    #profile .profileForm{
+        margin-top: 50px;
+        width: 240px;
+        font-size: 13px;
+    }
+    #profile .profileForm p{
+        margin-bottom: 5px;
+    }
+    #profile .profileForm p input{
+        padding: 5px 0px;
+    }
+    
+    
+    #account{
+        margin-top: 80px;
+    }
+    #account .boxes{
+        margin-top: -5px;
+    }
+    #account .dashboard_title{
+        font-size: 21px;
+        margin-bottom: 1px;
+    }
+    #account .boxes .one{
+        width: auto;
+        margin: 40px 0px;
+        float: none;
+    }
+    #account .boxes .one .dashboard_btn{
+        width: 80%;
+    }
+    #account .boxes .two{
+        width: auto;
+        margin: 40px 0px;
+        float: none;
+    }
+    #account .boxes .two .dashboard_btn{
+        width: 80%;
+    }
+    #account .boxes .three{
+        width: auto;
+        margin: 40px 0px;
+        float: none;
+    }
+    
+    #operations{
+        margin: 0px;
+        padding: 5px;
+        margin-top: -120px;
+    }
+    #operations .referalBox .referaltext{
+        width: auto;
+        float: none;
+    }
+    #operations .referalBox .referallink{
+        width: auto;
+        float: none;
+        margin-top: 50px;
+    }
+    #closeit{
+        margin-top: 50px;
+    }
+}
+
+

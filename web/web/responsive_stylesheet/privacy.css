@@ -1,0 +1,484 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 13, 2020, 1:10:19 AM
+    Author     : Gospel system
+*/
+
+
+body{
+    background-color: #f1f1f1;
+    font-family: noto sans;
+}
+#wrapper{
+    width: 100%;
+}
+body ,h1,h2,h3,h4,h5,h6,p{
+    margin:0px;
+}
+a, img, a img{
+    text-decoration: none;
+    border:none;
+}
+.cb{
+    clear: both;
+}
+#header{
+    width: 90%;
+    padding:20px 5%;
+    overflow: hidden;
+    border-bottom: 2px solid #ccc;
+    position: fixed;
+    top:0px;
+    background-color: #f1f1f1;
+    left: 0px;
+    z-index: 100;
+}
+#header div a{
+    float: left;
+    margin-right: 6%;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 14px;
+    color: #233D4D;
+}
+#header div .subscribe{
+    border-radius: 50px;
+    padding: 8px 20px;
+    margin-left: -4%;
+    margin-right: 2.5%;
+    margin-top: 30px;
+    text-align: center;
+    border:2px solid #233D4D;
+}
+#header div .subscribe:hover{
+    background-color:#233D4D;
+    border:2px solid #233D4D;
+    color: #fff;
+}
+#header div .signin{
+    border-radius: 50px;
+    padding: 8px 35px;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: -4%;
+    color: #fff;
+    border:2px solid #FE7F2D;
+    background-color: #FE7F2D;
+}
+#header div .signin:hover{
+    background-color: #FFA164;
+    border:2px solid #FFA164;
+    color: #fff;
+}
+#header div .target{
+    margin-top: 40px;
+}
+#header div .target:hover{
+    color: #FE7F2D;
+}
+#header #menu{
+    display: none;
+}
+#sidebar{
+    position: fixed;
+    top:0px;
+    left:0px;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    display: none;
+}
+#sidebar div{
+    background-color: #f1f1f1;
+    padding: 10px 0px;
+    width: 300px;
+    height: 100vh;
+    text-align: center;
+    overflow-y: auto;
+}
+#sidebar div #close{
+    position: relative;
+    left: 110px;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 50px;
+}
+#sidebar div p{
+    padding: 13px;
+    border-bottom: 0.1px solid #ccc;
+    color: #233D4D;
+}
+#sidebar div p a{
+    color: inherit;
+}
+#sidebar div p:hover{
+    color:#fff;
+    background-color: #233D4D;
+}
+
+#sidebar div nav{
+    margin-top: 30px;
+}
+#sidebar div nav a img{
+    margin: auto 2px;
+}
+#privacy{
+    overflow: hidden;
+    width: 90%;
+    margin: 150px 5%;
+    word-wrap: break-word;
+}
+#privacy .bottom{
+    clear: both;
+    margin-top: 70px;
+    padding-top: 30px ;
+    text-align: center;
+    color: #233D4D;
+    font-size: 20px;
+    border-top: 1px dashed #233D4D;
+}
+#privacy .bottom p{
+    margin-bottom:5px; 
+}
+#privacy h1{
+    color:#FE7F2D;
+    text-align: center;
+    font-weight: bolder;
+    line-height: 24px;
+    font-size: 40px;
+    margin:30px 0px 20px 0px;
+}
+#privacy .topparagraph{
+    color: #233D4D;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#privacy .midparagraph{
+    color: #427AA1;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+}
+
+#privacy p{
+    margin-bottom: 20px;
+}
+
+#footer{
+    margin-top: 40px;
+    background-color: #427AA1;
+    overflow: hidden;
+}
+#footer .firstpart{
+     background:url("assets/footerbg.png");
+     overflow: hidden;
+     background-size: cover;
+     min-height: 222px;
+}
+#footer .foot{
+    padding: 50px 5% 0px 5%;
+    overflow: hidden;
+}
+#footer .footlet{
+    float: left;
+    width: 24%;
+    margin-right: 1.2%;
+
+}
+#footer .footlet nav{
+    display: inline-block;
+}
+#footer .footlet *{
+    margin-bottom: 15px;
+}
+#footer p{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17px;
+    font-family: barlow;
+
+}
+#footer p,#footer a,#footer h2,#footer h3{
+    color: #fff;
+    text-decoration: none;
+}
+#footer h3{
+    font-size: 17px;
+    line-height: 23px;
+}
+#footer h2{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 41px;
+    letter-spacing: 0.06em;
+}
+#footer h2, #footer .firstp, #footer .lastp{
+    text-align: center;
+    margin-top: 40px;
+}
+#footer .lastp{
+    font-family: noto sans;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 23px;
+    background-color: #233d4d;
+}
+#footer .firstp{
+    margin-bottom: 40px;
+}
+#footer .firstp a{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+    background: #FE7F2D;
+    border-radius: 33px;
+    padding: 10px 20px;
+    color: #FFFFFF;
+}
+#footer .firstp a:hover{
+    background-color: #FFA164;
+    color: #fff;
+}
+#footer .foot .lastfootlet{
+    margin-right: 0px;
+}
+#footer .social{
+    width: 64px;
+    height: 37px;
+    margin-right:12.8px;
+}
+#footer .lastsocials{
+    margin-right: 0px;
+}
+#footer .footerfirstnav{
+    margin-bottom: 10px;
+}
+#footer .footerfirstnav *{
+    margin:0px 5px;
+}
+@media screen and (min-width: 1300px) and (max-width:1450px) {
+  
+    #header div a{
+       margin-right: 5.05%;
+    }
+    
+}
+@media screen and (min-width: 1220px) and (max-width:1299px) {
+  
+    #header div a{
+       margin-right: 5.5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+}
+@media screen and (min-width:1060px) and (max-width:1219px) {
+    #header div a{
+       margin-right: 5.5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width:750px) and (max-width:1059px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header #menu{
+        display: block;
+        float: left;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+        margin-right: 38%;
+    }
+    #header a .logo{
+        width: 100px;
+        height: 53px;
+        
+    }
+    #header div .signin{
+        float: right;
+        margin: 0px;
+        font-size: 13px;
+        padding: 4px 16px;
+        margin-top: 10px;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width:401px) and (max-width:749px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header{
+        text-align: center;
+    }
+    #header #menu{
+        display: block;
+        float: none;
+        position: absolute;
+        left: 5%;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+    }
+    #header a .logo{
+        width: 70px;
+        height: 37px;
+    }
+    #header div .signin{
+        margin: 0px;
+        font-size: 10px;
+        padding: 4px 16px;
+        margin-top: 5px;
+        float: none;
+        position: absolute;
+        right: 5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+    #footer h2{
+        font-size: 22px;
+    }
+    
+    #footer .foot{
+        padding: 20px 0px;
+    }
+    #footer .foot .socialfootlet{
+        margin-right: 0px;
+    }
+    #privacy{
+        margin-top: 100px;
+    }
+    #privacy h1{
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+    #privacy h2, h3, h4, h5{
+        font-size: 15px;
+    }
+    #privacy .text{
+        font-size: 13px;
+    }
+    
+    
+}
+
+@media screen and (min-width:0px) and (max-width:400px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header{
+        text-align: center;
+    }
+    #header #menu{
+        display: block;
+        float: none;
+        position: absolute;
+        left: 5%;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+    }
+    #header a .logo{
+        width: 70px;
+        height: 37px;
+    }
+    #header div .signin{
+        margin: 0px;
+        font-size: 10px;
+        padding: 4px 16px;
+        margin-top: 5px;
+        float: none;
+        position: absolute;
+        right: 5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+    #footer h2{
+        font-size: 22px;
+    }
+    #footer .firstp a{
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    #footer .foot{
+        padding: 20px 0px;
+    }
+    #footer .foot .footlet{
+        margin: auto 10%;
+        margin-bottom: 10px;
+    }
+    #footer .foot .socialfootlet {
+        clear: both;
+        float: none;
+        width: auto;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    #footer .foot .lastfootlet {
+        clear: both;
+        float: none;
+        width: auto;
+        text-align: left;
+    }
+    #privacy{
+        margin-top: 100px;
+    }
+    #privacy h1{
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+    #privacy h2, h3, h4, h5{
+        font-size: 15px;
+    }
+    #privacy p{
+        font-size: 13px;
+    }
+    
+    
+}
+
+

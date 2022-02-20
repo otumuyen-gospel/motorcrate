@@ -1,0 +1,63 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 30, 2020, 6:16:47 AM
+    Author     : user1
+*/
+
+@keyframes blinksmall {
+    0% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.small {
+    animation: blinksmall 1s;
+    animation-iteration-count: infinite;
+}
+.small:hover{
+    animation-play-state: paused;
+}
+
+@keyframes blinkbig {
+    0% {
+        opacity: 0;
+    }
+    49% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.big {
+    animation: blinkbig 1s;
+    animation-iteration-count: infinite;
+}
+.big:hover{
+    animation-play-state: paused;
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}

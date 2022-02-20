@@ -1,0 +1,1005 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 13, 2020, 1:10:19 AM
+    Author     : Gospel system
+*/
+
+
+input:focus, textarea:focus {
+border: 1px solid #427aa1 !important;
+box-shadow: 0 0 3px #427aa1 !important;
+-moz-box-shadow: 0 0 3px #427aa1 !important;
+-webkit-box-shadow: 0 0 3px #427aa1 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+outline-offset: 0px !important;
+outline: none !important;
+}
+body{
+    background-color: #f1f1f1;
+    font-family: noto sans;
+}
+#wrapper{
+    width: 100%;
+}
+body ,h1,h2,h3,h4,h5,h6,p{
+    margin:0px;
+}
+a, img, a img{
+    text-decoration: none;
+    border:none;
+}
+.cb{
+    clear: both;
+}
+#header{
+    width: 90%;
+    padding:20px 5%;
+    overflow: hidden;
+    border-bottom: 2px solid #ccc;
+    position: fixed;
+    top:0px;
+    background-color: #f1f1f1;
+    left: 0px;
+    z-index: 100;
+}
+#header div a{
+    float: left;
+    margin-right: 6%;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 14px;
+    color: #233D4D;
+}
+#header div .subscribe{
+    border-radius: 50px;
+    padding: 8px 20px;
+    margin-left: -4%;
+    margin-right: 2.5%;
+    margin-top: 30px;
+    text-align: center;
+    border:2px solid #233D4D;
+}
+#header div .subscribe:hover{
+    background-color:#233D4D;
+    border:2px solid #233D4D;
+    color: #fff;
+}
+#header div .signin{
+    border-radius: 50px;
+    padding: 8px 35px;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: -4%;
+    color: #fff;
+    border:2px solid #FE7F2D;
+    background-color: #FE7F2D;
+}
+#header div .signin:hover{
+    background-color: #FFA164;
+    border:2px solid #FFA164;
+    color: #fff;
+}
+#header div .target{
+    margin-top: 40px;
+}
+#header div .target:hover{
+    color: #FE7F2D;
+}
+#header #menu{
+    display: none;
+}
+#sidebar{
+    position: fixed;
+    top:0px;
+    left:0px;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    display: none;
+}
+#sidebar div{
+    background-color: #f1f1f1;
+    padding: 10px 0px;
+    width: 300px;
+    height: 100vh;
+    text-align: center;
+    overflow-y: auto;
+}
+#sidebar div #close{
+    position: relative;
+    left: 110px;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 50px;
+}
+#sidebar div p{
+    padding: 13px;
+    border-bottom: 0.1px solid #ccc;
+    color: #233D4D;
+}
+#sidebar div p a{
+    color: inherit;
+}
+#sidebar div p:hover{
+    color:#fff;
+    background-color: #233D4D;
+}
+
+#sidebar div nav{
+    margin-top: 30px;
+}
+#sidebar div nav a img{
+    margin: auto 2px;
+}
+#plan{
+    margin-top: 150px;
+    overflow: hidden;
+}
+#plan h1{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+
+    color: #FE7F2D;
+
+}
+#plan .firstp{
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin: 20px auto;
+    color: #313131;
+}
+#plan .planholder{
+    width: 70%;
+    margin: 70px 15%;
+}
+#plan .planholder .plans1{
+    width: 48%;
+    background: #FFFFFF;
+    box-shadow: 0px -3px 0px #624372;
+    float: left;
+    margin-right: 4%;
+    text-align: center;
+    padding: 20px 0px;
+}
+#plan .planholder .plans2{
+    width: 48%;
+    float: left;
+    margin: 0px;
+    background: #FFFFFF;
+    text-align: center;
+    padding: 20px 0px;
+    box-shadow: 0px -3px 0px #1A180B;
+}
+#plan .planholder .plans2 img, #plan .planholder .plans1 img{
+    width: 100%;
+}
+#plan .planholder .plans2 h3, #plan .planholder .plans1 h3{
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+
+    color: #313131;
+}
+#plan .planholder .plans2 .secondp, #plan .planholder .plans1 .secondp{
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 23px;
+    text-align: center;
+    width: 300px;
+    margin: auto 70px;
+    color: #313131;
+
+
+}
+#plan .planholder .plans1 p , #plan .planholder .plans2 p{
+    margin-bottom: 20px;
+}
+#plan .planholder .plans1 p a , #plan .planholder .plans2 p a{
+    border-radius: 50px;
+    padding: 15px 100px;
+    text-align: center;
+    margin-top: 30px;
+    margin-right: 0px;
+    color: #fff;
+    border:2px solid #FE7F2D;
+    background-color: #FE7F2D;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.02em;
+}
+.dropDown{
+    margin: 40px auto;
+    overflow: visible;
+}
+.dropDown .select{
+    border: 1px solid #C4C4C4;
+    border-radius: 7px;
+    padding: 15px 10px;
+    width: 80%;
+    overflow: hidden;
+    background-color: #fff;
+    cursor: pointer;
+}
+.dropDown .select nav span{
+    float: left;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 23px;
+    color: #666666;
+    cursor: pointer;
+}
+.dropDown .select nav #down{
+    float: right;
+    margin-top: 7px;
+    width:14px;
+    height: 7px;
+    cursor: pointer;
+}
+.dropDown .options{
+    border: 1px solid #C4C4C4;
+    border-radius: 7px;
+    padding: 0px;
+    width: 28.2%;
+    display: none;
+    overflow: hidden;
+    margin-top: 1px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #fff;
+    position: absolute;
+    margin-left: 2.6%;
+    z-index: 5;
+}
+.dropDown .options .option{
+    padding: 5px 10px;
+}
+.dropDown .options .option:hover{
+    background-color: #F1F1F1;
+    border-top: 0.5px solid #C4C4C4;
+    border-bottom: 0.5px solid #C4C4C4;
+    cursor: pointer;
+}
+.dropDown .options .option #val{
+    float: left;
+    font-family: Oleo Script;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 48px;
+    cursor: pointer;
+    color: #427AA1;
+    margin-right: 20px;
+    
+}
+.dropDown .options .option p{
+    text-align: left;
+    font-family: noto sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    color: #427AA1;
+
+}
+.dropDown .options .option p #cost{
+    font-family: noto sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    cursor: pointer;
+    color: #666666;
+}
+#care{
+     margin: 40px 5%;
+}
+#care .firstp{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #427AA1;
+
+}
+#care .firsth1{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    color: #FE7F2D;
+}
+#care .services{
+    background: #F7CD65;
+    margin-top: 30px;
+    padding: 2% 5%;
+    overflow: hidden;
+}
+#care .services h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 48px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #233D4D;
+}
+#care .services .service{
+    float: left;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    width: 15%;
+    margin-right: 13.33%;
+    color: #233D4D;
+}
+#care .services .lastservice{
+    margin-right: 0px;
+}
+
+.learn{
+    margin: 20px 20% 50px 20%;
+}
+.learn h1{
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    color: #FE7F2D;
+
+}
+.learn p{
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 200%;
+    color: #000000;
+}
+
+#footer{
+    margin-top: 40px;
+    background-color: #427AA1;
+    overflow: hidden;
+}
+#footer .firstpart{
+     background:url("assets/footerbg.png");
+     overflow: hidden;
+     background-size: cover;
+     min-height: 222px;
+}
+#footer .foot{
+    padding: 50px 5% 0px 5%;
+    overflow: hidden;
+}
+#footer .footlet{
+    float: left;
+    width: 24%;
+    margin-right: 1.2%;
+
+}
+#footer .footlet nav{
+    display: inline-block;
+}
+#footer .footlet *{
+    margin-bottom: 15px;
+}
+#footer p{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 17px;
+    font-family: barlow;
+
+}
+#footer p,#footer a,#footer h2,#footer h3{
+    color: #fff;
+    text-decoration: none;
+}
+#footer h3{
+    font-size: 17px;
+    line-height: 23px;
+}
+#footer h2{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 41px;
+    letter-spacing: 0.06em;
+}
+#footer h2, #footer .firstp, #footer .lastp{
+    text-align: center;
+    margin-top: 40px;
+}
+#footer .lastp{
+    font-family: noto sans;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 23px;
+    background-color: #233d4d;
+}
+#footer .firstp{
+    margin-bottom: 40px;
+}
+#footer .firstp a{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+    background: #FE7F2D;
+    border-radius: 33px;
+    padding: 10px 20px;
+    color: #FFFFFF;
+}
+#footer .firstp a:hover{
+    background-color: #FFA164;
+    color: #fff;
+}
+#footer .foot .lastfootlet{
+    margin-right: 0px;
+}
+#footer .social{
+    width: 64px;
+    height: 37px;
+    margin-right:12.8px;
+}
+#footer .lastsocials{
+    margin-right: 0px;
+}
+#footer .footerfirstnav{
+    margin-bottom: 10px;
+}
+#footer .footerfirstnav *{
+    margin:0px 5px;
+}
+
+@media screen and (min-width: 1300px) and (max-width:1450px) {
+  
+    #header div a{
+       margin-right: 5.05%;
+    }
+    
+    #plan .planholder .plans1 .secondp{
+        width: auto;
+        margin:auto;
+    }
+    #plan .planholder .plans1  select{
+        width: 90%;
+        padding: 15px 10px;
+    }
+    #plan .planholder .plans1 p a{
+        padding:10px 30px;
+        font-size: 15px;
+    }
+    
+    
+    #plan .planholder .plans2 .secondp{
+        width: auto;
+        margin:auto;
+    }
+    #plan .planholder .plans2  select{
+        width: 90%;
+        padding: 15px 10px;
+    }
+    #plan .planholder .plans2 p a{
+        padding:10px 30px;
+        font-size: 15px;
+    }
+    .learn{
+        width: 70%;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+    
+}
+@media screen and (min-width: 1220px) and (max-width:1299px) {
+  
+    #header div a{
+       margin-right: 5.5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    
+    #plan .planholder .plans1 .secondp{
+        width: auto;
+        margin:auto;
+    }
+    #plan .planholder .plans1  select{
+        width: 90%;
+        padding: 15px 10px;
+    }
+    #plan .planholder .plans1 p a{
+        padding:10px 30px;
+        font-size: 15px;
+    }
+    
+    
+    #plan .planholder .plans2 .secondp{
+        width: auto;
+        margin:auto;
+    }
+    #plan .planholder .plans2  select{
+        width: 90%;
+        padding: 15px 10px;
+    }
+    #plan .planholder .plans2 p a{
+        padding:10px 30px;
+        font-size: 15px;
+    }
+    .learn{
+        width: 70%;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+    
+}
+
+@media screen and (min-width:1060px) and (max-width:1219px) {
+    #header div a{
+       margin-right: 5.5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+    #plan .planholder .plans1 .secondp{
+        width: auto;
+        margin:auto;
+    }
+    #plan .planholder .plans1  select{
+        width: 90%;
+        padding: 15px 10px;
+    }
+    #plan .planholder .plans1 p a{
+        padding:10px 30px;
+        font-size: 15px;
+    }
+    
+    #plan .planholder .plans2 .secondp{
+        width: auto;
+        margin:auto;
+    }
+    #plan .planholder .plans2  select{
+        width: 90%;
+        padding: 15px 10px;
+    }
+    #plan .planholder .plans2 p a{
+        padding:10px 30px;
+        font-size: 15px;
+    }
+    .learn{
+        width: 70%;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+    
+}
+
+@media screen and (min-width:750px) and (max-width:1059px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header #menu{
+        display: block;
+        float: left;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+        margin-right: 38%;
+    }
+    #header a .logo{
+        width: 100px;
+        height: 53px;
+        
+    }
+    #header div .signin{
+        float: right;
+        margin: 0px;
+        font-size: 13px;
+        padding: 4px 16px;
+        margin-top: 10px;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+    #plan .planholder .plans1 {
+        width: 40%;
+        margin: auto 5%;
+    }
+    #plan .planholder .plans1 h3{
+        font-size: 22px;
+    }
+    #plan .planholder .plans1 img{
+        width: 100%;
+    }
+    #plan .planholder .plans1 .secondp{
+        width: auto;
+        margin:auto;
+    }
+    #plan .planholder .plans1  select{
+        width: 90%;
+        padding: 15px 10px;
+    }
+    #plan .planholder .plans1 p a{
+        padding:10px 30px;
+        font-size: 15px;
+    }
+    
+    #plan .planholder .plans2 {
+        width: 40%;
+        margin: auto 5%;
+    }
+    #plan .planholder .plans2 h3{
+        font-size: 22px;
+    }
+    #plan .planholder .plans2 img{
+        width: 100%;
+    }
+    .dropDown .options{
+        width: 25.2%;
+        margin-left: 0px;
+    }
+    .dropDown .select nav #down{
+        width: 14px;
+        height: 7px;
+    }
+    #plan .planholder .plans2 .secondp{
+        width: auto;
+        margin:auto;
+    }
+    #plan .planholder .plans2  select{
+        width: 90%;
+        padding: 15px 10px;
+    }
+    #plan .planholder .plans2 p a{
+        padding:10px 30px;
+        font-size: 15px;
+    }
+    .learn{
+        width: 80%;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    
+    
+}
+
+@media screen and (min-width:401px) and (max-width:749px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header{
+        text-align: center;
+    }
+    #header #menu{
+        display: block;
+        float: none;
+        position: absolute;
+        left: 5%;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+    }
+    #header a .logo{
+        width: 70px;
+        height: 37px;
+    }
+    #header div .signin{
+        margin: 0px;
+        font-size: 10px;
+        padding: 4px 16px;
+        margin-top: 5px;
+        float: none;
+        position: absolute;
+        right: 5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+    #footer h2{
+        font-size: 22px;
+    }
+    
+    #footer .foot{
+        padding: 20px 0px;
+    }
+    #footer .foot .socialfootlet{
+        margin-right: 0px;
+    }
+    
+    #plan .planholder{
+        margin: 0px 2% ;
+        width: 96%;
+    }
+    
+    #plan .planholder .plans1 {
+        width: 49%;
+        margin: auto 0.5%;
+    }
+    #plan .planholder .plans1 h3{
+        font-size: 22px;
+    }
+    #plan .planholder .plans1 img{
+        width: 100%;
+    }
+    #plan .planholder .plans1 .secondp{
+        width: auto;
+        margin:auto;
+    }
+    #plan .planholder .plans1  select{
+        width: 90%;
+        padding: 15px 10px;
+    }
+    #plan .planholder .plans1 p a{
+        padding:5px 30px;
+        font-size: 13px;
+    }
+    
+    #plan .planholder .plans2 {
+        width: 49%;
+        margin: auto 0.5%;
+    }
+    #plan .planholder .plans2 h3{
+        font-size: 22px;
+    }
+    #plan .planholder .plans2 img{
+        width: 100%;
+    }
+    .dropDown .options{
+        width: 100%;
+        margin: -60px 0px 0px 0px;
+        left:0px;
+    }
+    .dropDown .select nav #down{
+        width: 14px;
+        height: 7px;
+    }
+    #plan .planholder .plans2 .secondp{
+        width: auto;
+        margin:auto;
+    }
+    #plan .planholder .plans2  select{
+        width: 90%;
+        padding: 15px 10px;
+    }
+    #plan .planholder .plans2 p a{
+        padding:5px 30px;
+        font-size: 13px;
+    }
+    #care{
+        margin:40px 0px;
+    }
+    
+    #care .services{
+        padding: 2%;
+    }
+    #care .services h1{
+        font-size: 22px;
+    }
+    #care .services *{
+        font-size: 14px;
+    }
+    .learn{
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    
+}
+
+@media screen and (min-width:0px) and (max-width:400px) {
+    #header div a{
+       float: none;
+    }
+    #header .target{
+        display: none;
+    }
+    #header{
+        text-align: center;
+    }
+    #header #menu{
+        display: block;
+        float: none;
+        position: absolute;
+        left: 5%;
+        width: 22px;
+        height: 22px;
+        margin-top: 10px;
+    }
+    #header a .logo{
+        width: 70px;
+        height: 37px;
+    }
+    #header div .signin{
+        margin: 0px;
+        font-size: 10px;
+        padding: 4px 16px;
+        margin-top: 5px;
+        float: none;
+        position: absolute;
+        right: 5%;
+    }
+    #header div .subscribe{
+        display: none;
+    }
+    #header div .cont{
+        display: none;
+    }
+    
+    #footer h2{
+        font-size: 22px;
+    }
+    #footer .firstp a{
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    #footer .foot{
+        padding: 20px 0px;
+    }
+    #footer .foot .footlet{
+        margin: auto 10%;
+        margin-bottom: 10px;
+    }
+    #footer .foot .socialfootlet {
+        clear: both;
+        float: none;
+        width: auto;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    #footer .foot .lastfootlet {
+        clear: both;
+        float: none;
+        width: auto;
+        text-align: left;
+    }
+    #plan {
+        margin-top: 100px;
+    }
+    #plan h1{
+        font-size: 22px;
+    }
+    #plan .planholder{
+        margin: 0px ;
+        width: 100%;
+    }
+    
+    #plan .planholder .plans1 {
+        width: 96%;
+        margin: auto 2%;
+        float:  none;
+    }
+    #plan .planholder .plans1 h3{
+        font-size: 22px;
+    }
+    #plan .planholder .plans1 img{
+        width: 100%;
+    }
+    #plan .planholder .plans1 .secondp{
+        width: auto;
+        margin:auto;
+    }
+    #plan .planholder .plans1  select{
+        width: 90%;
+        padding: 15px 10px;
+    }
+    #plan .planholder .plans1 p a{
+        padding:5px 30px;
+        font-size: 13px;
+    }
+    
+    #plan .planholder .plans2 {
+        width: 96%;
+        margin: auto 2%;
+        float:  none;
+        margin-top: 20px;
+    }
+    #plan .planholder .plans2 h3{
+        font-size: 22px;
+    }
+    #plan .planholder .plans2 img{
+        width: 100%;
+    }
+    .dropDown .options{
+        width: 100%;
+        margin: -60px 0px 0px 0px;
+        left:0px;
+    }
+    .dropDown .select nav #down{
+        width: 14px;
+        height: 7px;
+    }
+    #plan .planholder .plans2 .secondp{
+        width: auto;
+        margin:auto;
+    }
+    #plan .planholder .plans2  select{
+        width: 90%;
+        padding: 15px 10px;
+    }
+    #plan .planholder .plans2 p a{
+        padding:5px 30px;
+        font-size: 13px;
+    }
+    #care{
+        margin:40px 0px;
+    }
+    #care .firsth1{
+        font-size: 22px;
+    }
+    
+    #care .services{
+        padding: 2%;
+    }
+    #care .services h1{
+        font-size: 22px;
+    }
+    #care .services *{
+        font-size: 14px;
+    }
+    #care .services .service{
+        text-align: center;
+        float: none;
+        width:auto;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    .learn h1{
+        font-size: 22px;
+    }
+    .learn{
+        width: 96%;
+        margin-right: 2%;
+        margin-left: 2%;
+        text-align: left;
+    }
+    
+}
+
+
