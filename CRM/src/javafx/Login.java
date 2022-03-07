@@ -108,7 +108,6 @@ public class Login extends Stage{
                 }catch(Exception e){
                     errorLabel.setText("error: Unable to connect to the server hosting domain");
                     errorLabel.setStyle("-fx-text-fill:red;");
-                    e.printStackTrace();
                     
                 }
                 
